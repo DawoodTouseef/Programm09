@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="employeeApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+    <script src="angular.js"></script>
+</head>
+<body ng-controller="empcontoller">
+    <h2>EmployeeApp</h2>
+    <label >Search by Name:</label>
+    <input type="text" ng-model="searchName">
+
+    <label >Search by Salary:</label>
+    <input type="text" ng-model="searchSalary">
+    <button ng-click="Searchemploye()">Search</button>
+    <ul>
+        <li ng-repeat="employee in filtered">
+            {{employee.name}} - {{employee.salary}}
+        </li>
+
+    </ul>
+    <script src="script.js"></script>
+
+</body>
+</html>
